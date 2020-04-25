@@ -1,6 +1,6 @@
 class FamilyTree {
   constructor (value){
-    if(typeof value !== 'string'){
+    if(typeof value !== 'string' || value === 'undefined'){
       throw 'error';
     } else {
       this.value = value;
@@ -10,8 +10,7 @@ class FamilyTree {
   }
   
   insert(name){
-    this.children.push(name);
-    return this.children;
+    this.children.push(new FamilyTree(name));
   }
 
   familySize(){
@@ -19,15 +18,15 @@ class FamilyTree {
   }
 
   findMember(name){
-    if(this.value.includes(name)){
-      return this.children;
+    if(this.children.includes(name)){
+      console.log(true);
     } else {
       return 'undefined';
     }
   }
 
-  log(){
-
+  log(name){
+    
   }
 }
 
