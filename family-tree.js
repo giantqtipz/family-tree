@@ -25,8 +25,10 @@ class FamilyTree {
     }
   }
 
-  log(name){
-    
+  log(){
+    return this.children.reduce(function(current,next){
+      return 
+    }`-- ${this.value}`);
   }
 }
 
