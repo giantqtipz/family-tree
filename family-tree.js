@@ -22,7 +22,8 @@ class FamilyTree {
 
   findMember(name){
 
-    // Take 1 -- Initially failed the test spec, because the forEach method is returning inside the method. Learned not to return 'index" inside the method, but instead reassign a variable with the value of 'index'.
+    //  Take 1 - Initially failed the test spec, because the forEach method is returning inside the method. 
+    //  Learned not to return 'index" inside the method, but instead reassign a variable with the value of 'index'.
       let person = '';
       this.children.forEach(function(index){
         if(index.value === name){
@@ -31,17 +32,19 @@ class FamilyTree {
       });
       return person;
 
-      // // Take 2 - this is accepted as is, and will solve all test specs. But learned not to return inside a for loop. 
-      // for (let i = 0; i < this.children.length; i++) {
-      //   if (this.children[i].value === name) {
-      //     return this.children[i];
-      //   } 
-      // } 
+    //  Take 2 - This is accepted as is, and will solve all test specs. 
+    //  But learned not to return inside a for loop. 
+    //  for (let i = 0; i < this.children.length; i++) {
+    //    if (this.children[i].value === name) {
+    //      return this.children[i];
+    //    } 
+    //   } 
 
-      // Take 3 -- this passes this test spec, but will cause log test spec to fail (Henry and Vivian will be Mike's children, not Amy's). This is because it's a spread operator, not a method to loop through arrays.
-      // return function(arg){
-      //   return arg;
-      // }(...this.children);
+    //  Take 3 - This passes this test spec, but will cause log test spec to fail 
+    //  (Henry and Vivian will be Mike's children, not Amy's). This is because it's a spread operator, not a method to loop through arrays.
+    //  return function(arg){
+    //    return arg;
+    //  }(...this.children);
   }
 
   log(){
