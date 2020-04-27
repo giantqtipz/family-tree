@@ -41,7 +41,7 @@ class FamilyTree {
     //   } 
 
     //  Take 3 - This passes this test spec, but will cause log test spec to fail 
-    //  (Henry and Vivian will be Mike's children, not Amy's). This is because it's a spread operator, not a method to loop through arrays.
+    //  (Henry and Vivian will be Mike's children, not Amy's). This is because spread operators do not loop through arrays.
     //  return function(arg){
     //    return arg;
     //  }(...this.children);
